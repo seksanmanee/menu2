@@ -22,6 +22,7 @@
 	
 	<link rel="stylesheet" href="cssm/style.css" />
 	<link rel="stylesheet" href="css/jquery.overly.css" />
+	<link rel="stylesheet" type="text/css" href="css/sbimenu.css" />
 </head>
 
 <body>
@@ -33,15 +34,23 @@
     <!-- Background Pattern Swither -->
 
     <!-- ****** Top Header Area Start ****** -->
+	
+	 <!--
 	<div style="position:fixed;top:0;z-index:20;width:100%">
 		<center><a href="index.html"><image src="images/logo.png" style="width:100px"></a></center>
 	</div>
+	-->
 	
-    <div class="top_header_area" style="background-color:#FFFFFF;height:50px;position:fixed;top:0;z-index:10;">
-        <div class="container">
-            <div class="row">
-            </div>
-        </div>
+    <div class="top_header_area" style="background-color:#000000;height:80px;position:fixed;top:0;z-index:10;opacity:0.8;">
+				<table style="width:100%">
+					<tr><td colspan="4" style="height:15px"></td></tr>
+					<tr style="height:100%">
+						<td align="center" valign="middle"><a href="#" id="mn1"><p class="mainmenu">VTW</p></a></td>
+						<td align="center" valign="middle"><p class="mainmenu">VTP</p></td>
+						<td align="center" valign="middle"><p class="mainmenu">VTS</p></td>
+						<td align="center" valign="middle"><p class="mainmenu">VTPro</p></td>
+					</tr>
+				</table>
     </div>
     <!-- ****** Top Header Area End ****** -->
 
@@ -58,7 +67,7 @@
             <div class="row">
 
                 <!-- Single Post -->
-                <div class="col-12 col-lg-6" style="background-color:#f9e6ff;">
+                <div class="col-12 col-sm-6" style="background-color:#f9e6ff;">
                     <div class="single-post wow fadeInUp" data-wow-delay="0.1s">
                         <!-- Post Thumb -->
                         <div class="post-thumb">
@@ -101,7 +110,7 @@
                 </div>
 
                 <!-- Single Post -->
-                <div class="col-12 col-lg-6" style="background-color:#f9e6ff;">
+                <div class="col-12 col-sm-6" style="background-color:#f9e6ff;">
                     <div class="single-post wow fadeInUp" data-wow-delay="0.2s">
                         <!-- Post Thumb -->
                         <div class="post-thumb">
@@ -334,9 +343,6 @@
             <div class="row">
                 <div class="col-12">
                     <!-- Copywrite Text -->
-                    <div class="copy_right_text text-center">
-                        <p>Copyright @2018 All rights reserved | MP</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -354,3 +360,115 @@
     <!-- Active JS -->
     <script src="js/active.js"></script>
 </body>
+
+<script>
+		$(document).ready(function(){
+		
+			$("#mng1").hide();
+			$("#mng2").hide();
+			$("#mng3").hide();
+			$("#mng4").hide();
+			
+			$("#mng1c").hide();
+			$("#mng2c").hide();
+			$("#mng3c").hide();
+			$("#mng4c").hide();
+				
+			$("#mn1").click(function(){
+				$("#mng2").fadeOut();
+				$("#mng3").fadeOut();
+				$("#mng4").fadeOut();
+				
+				$("#mng2c").fadeOut();
+				$("#mng3c").fadeOut();
+				$("#mng4c").fadeOut();
+				
+				$("#mng1").fadeIn(500);
+				$("#mng1c").fadeIn(1000);
+			});
+			
+			$("#mn2").click(function(){
+				$("#mng1").fadeOut();
+				$("#mng3").fadeOut();
+				$("#mng4").fadeOut();
+				
+				$("#mng1c").fadeOut();
+				$("#mng3c").fadeOut();
+				$("#mng4c").fadeOut();
+				
+				$("#mng2").fadeIn(1000);
+				$("#mng2c").fadeIn(2000);
+				
+			});
+			
+			$("#mn3").click(function(){
+				$("#mng1").fadeOut();
+				$("#mng2").fadeOut();
+				$("#mng4").fadeOut();
+				
+				$("#mng1c").fadeOut();
+				$("#mng2c").fadeOut();
+				$("#mng4c").fadeOut();
+				
+				$("#mng3").fadeIn(1000);
+				$("#mng3c").fadeIn(2000);
+			});
+			
+			$("#mn4").click(function(){
+				$("#mng1").fadeOut();
+				$("#mng2").fadeOut();
+				$("#mng3").fadeOut();
+				
+				$("#mng1c").fadeOut();
+				$("#mng2c").fadeOut();
+				$("#mng3c").fadeOut();
+				
+				$("#mng4").fadeIn(1000);
+				$("#mng4c").fadeIn(2000);
+			});
+		});
+		</script>
+		
+		<div id="mng1" style="position:absolute;left:0px;top:78px;z-index: 10;background-color:black;opacity:0.8;height:100%; width:100%;">
+		</div>
+		<div id="mng1c" style="position:absolute;left:0px;top:200px;z-index:20;width:100%;">
+			<center>
+			<p class="menulist"><a href="menu1.html">Vine</a></p>
+			<p class="menulist">Snack</p>
+			<p class="menulist">.....</p>
+			<p class="menulist">.....</p>
+			</center>
+		</div>
+		
+		<div id="mng2" style="position:absolute;left:0px;top:78px;z-index: 10;background-color:yellow;opacity:0.3;height:100%; width:100%;">
+		</div>
+		<div id="mng2c" style="position:absolute;left:0px;top:200px;z-index:20;width:100%;">
+			<center>
+			<p class="menulist">Vine</p>
+			<p class="menulist">Snack</p>
+			<p class="menulist">.....</p>
+			<p class="menulist">.....</p>
+			</center>
+		</div>
+		
+		<div id="mng3" style="position:absolute;left:0px;top:78px;z-index: 10;background-color:magenta;opacity:0.3;height:100%; width:100%;">
+		</div>
+		<div id="mng3c" style="position:absolute;left:0px;top:200px;z-index:20;width:100%;">
+			<center>
+			<p class="menulist">Vine</p>
+			<p class="menulist">Snack</p>
+			<p class="menulist">.....</p>
+			<p class="menulist">.....</p>
+			</center>
+		</div>
+		
+		<div id="mng4" style="position:absolute;left:0px;top:78px;z-index:10;background-color:white;opacity:0.3;height:100%; width:100%;">
+		</div>
+		<div id="mng4c" style="position:absolute;left:0px;top:200px;z-index:20;width:100%;">
+			<center>
+			<p class="menulist">Vine</p>
+			<p class="menulist">Snack</p>
+			<p class="menulist">.....</p>
+			<p class="menulist">.....</p>
+			</center>
+		</div>
