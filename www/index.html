@@ -10,17 +10,44 @@
 		<link rel="stylesheet" type="text/css" href="css/sbimenu.css" />
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
 		<link href='http://fonts.googleapis.com/css?family=News+Cycle&v1' rel='stylesheet' type='text/css' />
-		
+		<link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+		<style>
+			.mainmenu {
+				font-family: 'Kalam';font-size: 22px;
+			}
+			
+			.menulist{
+				font-family: 'Kalam';font-size: 40px;
+			}
+			
+			a:active {
+				color: #FFFFFF;
+			}
+			a:visited {
+				color: #FFFFFF;
+			}
+		</style>
     </head>
     <body>
-		<div class="top_header_area" style="width:100%;background-color:#000000;height:80px;position:fixed;bottom:0px;z-index:10;opacity:0.8;">
+		<div class="top_header_area" style="width:100%;background-color:#000000;height:100px;position:fixed;bottom:0px;z-index:10;opacity:0.8;">
 			<table style="width:100%">
 				<tr><td colspan="4" style="height:15px"></td></tr>
 				<tr style="height:100%">
-					<td align="center" valign="middle"><a href="#" id="mn1"><p class="mainmenu">VTW</p></a></td>
-					<td align="center" valign="middle"><a href="#" id="mn2"><p class="mainmenu">VTP</p></a></td>
-					<td align="center" valign="middle"><a href="#" id="mn3"><p class="mainmenu">VTS</p></a></td>
-					<td align="center" valign="middle"><a href="#" id="mn4"><p class="mainmenu">VTPro</p></a></td>
+					<td align="center" valign="middle" style="width:25%">
+						<div id="example1"><a href="menu1_1.html"><p class="mainmenu">Menu</p></a></div>
+					</td>
+					<td align="center" valign="middle" style="width:25%"><a href="#" id="mn2"><p class="mainmenu">Legacy Cocktail</p></a></td>
+					<td align="center" valign="middle" style="width:25%">
+						<a href="#" id="mn3">
+						<p class="mainmenu">
+							One Should Not Drink
+							On An Empty Stomach
+							<!--On An Empty Stomach-->
+						</p>
+						</a>
+					</td>
+					<td align="center" valign="middle" style="width:25%"><a href="special-event.html" id="mn4"><p class="mainmenu">Special & Event</p></a></td>
 				</tr>
 			</table>
 		</div>
@@ -45,6 +72,9 @@
 		<script>
 		$(document).ready(function(){
 		
+			$("#defaultc").hide();
+			$("#defaultc").fadeIn(2000);
+			
 			$("#mng1").hide();
 			$("#mng2").hide();
 			$("#mng3").hide();
@@ -57,6 +87,8 @@
 				
 			$("#mn1").click(function(){
 				$("#default").fadeOut();
+				$("#defaultc").fadeOut();
+				
 				$("#mng2").fadeOut();
 				$("#mng3").fadeOut();
 				$("#mng4").fadeOut();
@@ -71,6 +103,8 @@
 			
 			$("#mn2").click(function(){
 				$("#default").fadeOut();
+				$("#defaultc").fadeOut();
+				
 				$("#mng1").fadeOut();
 				$("#mng3").fadeOut();
 				$("#mng4").fadeOut();
@@ -86,6 +120,8 @@
 			
 			$("#mn3").click(function(){
 				$("#default").fadeOut();
+				$("#defaultc").fadeOut();
+				
 				$("#mng1").fadeOut();
 				$("#mng2").fadeOut();
 				$("#mng4").fadeOut();
@@ -100,6 +136,8 @@
 			
 			$("#mn4").click(function(){
 				$("#default").fadeOut();
+				$("#defaultc").fadeOut();
+				
 				$("#mng1").fadeOut();
 				$("#mng2").fadeOut();
 				$("#mng3").fadeOut();
@@ -115,48 +153,27 @@
 		</script>
     </body>
 		
-		<div id="default" style="position:absolute;left:0px;bottom:78px;z-index:20;height:100%;width:100%;background-image:url('images/default.jpg');"></div>
-		<div id="mngb" style="position:absolute;left:0px;bottom:78px;z-index:20;height:100%;width:100%;background-color:black;opacity:0.5;"></div>
-		
-		<div id="mng1" style="position:absolute;left:0px;bottom:80px;z-index: 10;height:100%; width:100%;background-image:url('images/1.jpg');"></div>
-		<div id="mng1c" style="position:absolute;left:0px;top:200px;z-index:20;width:100%;">
-			<center>
-			<p class="menulist"><a href="menu1.html">Vine</a></p>
-			<p class="menulist">Snack</p>
-			<p class="menulist">.....</p>
-			<p class="menulist">.....</p>
-			</center>
-		</div>
-		
+		<div id="default" style="position:absolute;left:0px;bottom:78px;z-index:20;height:100%;width:100%;background-image:url('images/default_bg.jpg');background-size: 100% 100%;"></div>
+		<div id="defaultc" style="position:absolute;left:0px;bottom:78px;z-index:20;height:100%;width:100%;background-image:url('images/default.jpg');background-size: 100% 100%;"></div>
+
 		<div id="mng2" style="position:absolute;left:0px;bottom:80px;z-index: 10;height:100%; width:100%;background-image:url('images/2.jpg');"></div>
 		<div id="mng2c" style="position:absolute;left:0px;top:200px;z-index:30;width:100%;">
 			<center>
-			<p class="menulist">Beef</p>
-			<p class="menulist">Fish</p>
-			<p class="menulist">Pork</p>
-			<p class="menulist">Steak</p>
+			<p class="menulist" style="height:60px"><a href="menu2_1.html">Legacy Cocktail</a></p>
+			<p class="menulist" style="height:60px"><a href="menu2_2.html">Share Too</a></p>
+			<p class="menulist" style="height:60px"><a href="menu2_3.html">Zero Alcohol</a></p>
 			</center>
 		</div>
 		
 		<div id="mng3" style="position:absolute;left:0px;bottom:80px;z-index: 10;height:100%; width:100%;background-image:url('images/3.jpg');"></div>
 		<div id="mng3c" style="position:absolute;left:0px;top:200px;z-index:30;width:100%;">
 			<center>
-			<p class="menulist">Beer</p>
-			<p class="menulist">Wodka</p>
-			<p class="menulist">...</p>
-			<p class="menulist">...</p>
+			<p class="menulist" style="height:90px"><a href="menu3_1.html">One Should Not Drink<br>On An Empty Stomach</a></p>
+			<p class="menulist" style="height:60px"><a href="menu3_2.html">Dressert of The Day 290</a></p>
+			<p class="menulist" style="height:60px"><a href="menu3_3.html">Mussel Mania 750</a></p>
+			<p class="menulist" style="height:60px"><a href="menu3_4.html">Bites</a></p>
 			</center>
 		</div>
 		
-		<div id="mng4" style="position:absolute;left:0px;bottom:80px;z-index:10;background-color:white;opacity:0.3;height:100%; width:100%;background-image:url('images/4.jpg');">
-		</div>
-		<div id="mng4c" style="position:absolute;left:0px;top:200px;z-index:20;width:100%;">
-			<center>
-			<p class="menulist">Vine</p>
-			<p class="menulist">Snack</p>
-			<p class="menulist">.....</p>
-			<p class="menulist">.....</p>
-			</center>
-		</div>
 		
 </html>
