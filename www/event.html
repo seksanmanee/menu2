@@ -82,7 +82,7 @@
 					</a>
 				</td>
 				<td align="center" valign="middle" style="width:150px;vertical-align:middle;">
-					<a href="special-event.html">
+					<a href="#" onclick="mn3()">
 					<p class="mainmenu" style="font-size:13px">Special & Event</p>
 					</a>
 				</td>
@@ -103,12 +103,14 @@
         <div class="container">
             <div class="row" style="background-color:#f0b3ff;">
 				
+				<div style="height:20px">&nbsp;</div>
+				
 				<div class="col-12" style="background-color:#f0b3ff;">
                     <div class="single-post wow fadeInUp" data-wow-delay="0.1s">
                         <!-- Post Content -->
                         <div class="post-content">
                             <center>
-                                <p class="mainmenu" style="font-size:40px">Special & Event</p>
+                                <p class="mainmenu" style="font-size:40px">Event</p>
                             </center>
                         </div>
                     </div>
@@ -174,23 +176,22 @@
 
 <script>
 		$(document).ready(function(){
-		
 			$("#mng1").hide();
 			$("#mng2").hide();
+			$("#mng3").hide();
 			
 			$("#mng1c").hide();
 			$("#mng2c").hide();
+			$("#mng3c").hide();
 		});
 		
 		function mn1(){
 		
 			$("#mng2").fadeOut();
 			$("#mng3").fadeOut();
-			$("#mng4").fadeOut();
 				
 			$("#mng2c").fadeOut();
 			$("#mng3c").fadeOut();
-			$("#mng4c").fadeOut();
 				
 			$("#mng1").fadeIn(500);
 			$("#mng1c").fadeIn(1000);
@@ -206,11 +207,9 @@
 		
 			$("#mng1").fadeOut();
 			$("#mng3").fadeOut();
-			$("#mng4").fadeOut();
 				
 			$("#mng1c").fadeOut();
 			$("#mng3c").fadeOut();
-			$("#mng4c").fadeOut();
 				
 			$("#mng2").fadeIn(1000);
 			$("#mng2c").fadeIn(2000);
@@ -220,6 +219,24 @@
 		{
 			$("#mng2").fadeOut();
 			$("#mng2c").fadeOut();
+		}
+		
+		function mn3(){
+		
+			$("#mng1").fadeOut();
+			$("#mng2").fadeOut();
+				
+			$("#mng1c").fadeOut();
+			$("#mng2c").fadeOut();
+				
+			$("#mng3").fadeIn(1000);
+			$("#mng3c").fadeIn(2000);
+		}
+		
+		function mn3hide()
+		{
+			$("#mng3").fadeOut();
+			$("#mng3c").fadeOut();
 		}
 		
 		</script>
@@ -245,4 +262,13 @@
 			</center>
 		</div>
 		
+		<div id="mng3" style="position:fixed;left:0px;top:78px;z-index:10;background-color:black;opacity:0.8;height:100%; width:100%;" onclick="mn3hide()">
+		</div>
+		<div id="mng3c" style="position:fixed;left:0px;top:200px;z-index:20;width:100%;" onclick="mn3hide()">
+			<center>
+			<p class="menulist" style="height:80px"><a href="promotion.html">Promotion</a></p>
+			<p class="menulist" style="height:80px"><a href="event.html">Event</a></p>
+			<p class="menulist" style="height:80px"><a href="social.html">Social</a></p>
+			</center>
+		</div>
 		
